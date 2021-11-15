@@ -1,0 +1,40 @@
+1-
+CREATE TABLE Curso (
+  	codigo INTEGER NOT NULL,
+	  Nombre VARCHAR NOT NULL,
+  	Descripcion VARCHAR,
+  	Turno VARCHAR NOT NULL,
+  	PRIMARY KEY(codigo)
+);
+
+2-
+ALTER TABLE Curso
+ADD COLUMN Cupo INTEGER
+
+3-
+INSERT INTO Curso (codigo,nombre,descripcion,turno,cupo,profesor_id)
+VALUES (101, “Algoritmos”,”Algoritmos y Estructuras de Datos”,”Mañana”,35);
+
+INSERT INTO Curso (codigo,nombre,descripcion,turno,cupo,profesor_id)
+VALUES (102, “Matemática Discreta”,””,”Tarde”,30);
+
+4-
+INSERT INTO Curso (codigo,nombre,descripcion,turno,cupo,profesor_id)
+VALUES (103, NULL,””,”Tarde”,35);
+
+5-
+INSERT INTO Curso (codigo,nombre,descripcion,turno,cupo,profesor_id)
+VALUES (101, “Matemática Discreta II”,””,”Tarde”,35);
+
+6-
+UPDATE Curso
+SET cupo = 25
+WHERE codigo = 101
+
+UPDATE Curso
+SET cupo = 25
+WHERE codigo = 102
+
+7-
+DELETE FROM Curso 
+WHERE nombre = 'Algoritmos'
