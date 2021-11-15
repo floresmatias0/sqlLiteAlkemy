@@ -1,0 +1,22 @@
+Ejercitacion 3 Queries
+
+1-
+SELECT nombre,apellido,fecha_nacimiento 
+FROM Profesor
+ORDER BY fecha_nacimiento ASC;
+
+2-
+SELECT * FROM Profesor
+WHERE salario >= 65000;
+
+3- 
+SELECT * FROM Profesor
+WHERE fecha_nacimiento LIKE '197%'
+
+5- 
+SELECT * FROM Profesor
+WHERE apellido LIKE 'P%'
+
+6-
+SELECT * FROM Profesor
+WHERE fecha_nacimiento LIKE '197%' OR salario >= 80000
